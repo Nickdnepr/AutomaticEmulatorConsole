@@ -1,5 +1,0 @@
-package automatic
-
-class AutomaticConstructor {
-
-}

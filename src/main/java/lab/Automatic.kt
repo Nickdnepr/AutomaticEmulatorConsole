@@ -1,6 +1,6 @@
 package automatic
 
-data class Automatic(private val states: MutableMap<String,AutomaticState>, private val startupState: AutomaticState) {
+data class Automatic(val states: MutableMap<String,AutomaticState>, private val startupState: AutomaticState) {
 
     var currentState = startupState
 
@@ -10,6 +10,10 @@ data class Automatic(private val states: MutableMap<String,AutomaticState>, priv
 
     fun goToState(qualifier:String){
         currentState = states.getOrDefault(qualifier, currentState)
+    }
+
+    fun addState(state: AutomaticState){
+        states[state.qualifier] = state
     }
 
 
