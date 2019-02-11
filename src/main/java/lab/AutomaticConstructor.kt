@@ -1,4 +1,4 @@
-package automatic
+package lab
 
 import java.lang.NullPointerException
 
