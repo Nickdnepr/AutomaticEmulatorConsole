@@ -16,6 +16,7 @@ fun main(args: Array<String>) {
     state2.transactions['0'] = "state1"
     state2.transactions['1'] = "state1"
 
+
 //    val automatic = Automatic(mutableMapOf(Pair(state1.qualifier, state1), Pair(state2.qualifier, state2)), state1)
 //    automatic.step('1')
 //    println(automatic.currentState.qualifier)
@@ -50,6 +51,7 @@ fun main(args: Array<String>) {
 
     constructor.addTransaction("state4", "state1", '0')
     constructor.addTransaction("state4", "End", '1')
+    constructor.removeState("state4")
     val end = constructor.build()
 
     println(end.currentState.qualifier)
@@ -64,5 +66,6 @@ fun main(args: Array<String>) {
     end.step('1')
     println(end.currentState.qualifier)
 
+    println(Gson().toJson(end))
 }
 

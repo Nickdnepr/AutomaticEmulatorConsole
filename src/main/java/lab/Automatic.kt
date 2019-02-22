@@ -9,7 +9,7 @@ data class Automatic(val states: MutableMap<String,AutomaticState>, private val 
     }
 
     fun step(letter: Char) {
-        currentState = states.getOrDefault(currentState.getNextQualifier(letter), currentState)
+        currentState = states[currentState.getNextQualifier(letter)]?:throw IllegalStateException("state does not have condition for specified letter or qualified state does not exists")
     }
 
     fun goToState(qualifier:String){
