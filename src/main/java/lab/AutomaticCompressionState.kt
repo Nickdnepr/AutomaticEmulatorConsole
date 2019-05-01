@@ -1,0 +1,4 @@
+package lab
+
+class AutomaticCompressionState {
+}

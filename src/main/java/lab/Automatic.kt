@@ -1,6 +1,6 @@
-package lab
+package stacklab.nickdnepr.com.automaticaemu.automaticaCore
 
-data class Automatic(val states: MutableMap<String,AutomaticState>, private val startupState: AutomaticState) {
+data class Automatic(val states: MutableMap<String, AutomaticState>, val startupState: AutomaticState, val alphabet:MutableList<Char>) {
 
     var currentState = startupState
 
@@ -13,12 +13,12 @@ data class Automatic(val states: MutableMap<String,AutomaticState>, private val 
     }
 
     fun goToState(qualifier:String){
-        currentState = states.getOrDefault(qualifier, currentState)
+        currentState = states[qualifier] ?:currentState
     }
 
     fun addState(state: AutomaticState){
         states[state.qualifier] = state
     }
 
-
+    fun getAnswer() = currentState.isFinal
 }
