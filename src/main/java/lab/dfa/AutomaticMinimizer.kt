@@ -41,7 +41,6 @@ object AutomaticMinimizer {
                 transactions.keys.forEach { letter ->
                     compressedStates.forEach { compressedState ->
                         if (compressedState.qualifier.contains(transactions[letter]!!)) {
-                            println("${compressedStates.find { compressedStateContainsState(it, this) }?.qualifier} is mapped to ${compressedState.qualifier} by $letter")
                             constructor.addTransaction(compressedStates.find { compressedStateContainsState(it, this) }!!.qualifier, compressedState.qualifier, letter)
                         }
                     }

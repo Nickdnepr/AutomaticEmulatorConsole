@@ -2,7 +2,7 @@ package stacklab.nickdnepr.com.automaticaemu.automaticaCore
 
 class AutomaticConstructor private constructor(private val automatic: Automatic) {
 
-    val alphabet = mutableListOf<Char>()
+    private val alphabet = mutableListOf<Char>()
 
     fun addState(state: AutomaticState) {
         automatic.addState(state)
@@ -23,7 +23,6 @@ class AutomaticConstructor private constructor(private val automatic: Automatic)
             if (alphabet.isEmpty()) {
                 throw IllegalStateException("Automatic alphabet is empty")
             }
-
 //            it.transactions.keys.forEach {
 //                if (!alphabet.contains(it)){
 //                    throw IllegalStateException("Automatic is not complete")
