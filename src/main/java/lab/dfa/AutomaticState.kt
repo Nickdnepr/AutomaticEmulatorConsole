@@ -5,8 +5,6 @@ data class AutomaticState(val transactions:MutableMap<Char, String>, val isFinal
     fun getNextQualifier(letter:Char) = transactions[letter]
 
     override fun toString(): String {
-        return "AutomaticState(qualifier='$qualifier')"
+        return "AutomaticState(transactions=$transactions, qualifier='$qualifier')"
     }
-
-
 }

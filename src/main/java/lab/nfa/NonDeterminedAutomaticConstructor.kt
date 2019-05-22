@@ -13,12 +13,15 @@ class NonDeterminedAutomaticConstructor private constructor(private val automati
                 automatic.states[stateQualifier] ?: throw NullPointerException("State with $stateQualifier not found")
         current.transactions.add(Pair(letter, transactionQualifier))
         automatic.reviewForLambdas()
-        if (!alphabet.contains(letter)) {
+        if (!alphabet.contains(letter) && letter != NonDeterminedAutomatic.lambda) {
             alphabet.add(letter)
         }
     }
 
-    fun build() = automatic
+    fun build(): NonDeterminedAutomatic {
+        automatic.alphabet.addAll(alphabet)
+        return automatic
+    }
 
     companion object {
         fun instance(startupState: NonDeterminedAutomaticState) = NonDeterminedAutomaticConstructor(NonDeterminedAutomatic(mutableMapOf(), startupState, mutableListOf()))

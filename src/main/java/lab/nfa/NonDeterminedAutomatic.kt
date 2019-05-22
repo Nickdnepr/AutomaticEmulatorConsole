@@ -15,6 +15,14 @@ class NonDeterminedAutomatic(val states: MutableMap<String, NonDeterminedAutomat
         }
     }
 
+    fun testStep(letter: Char): MutableList<NonDeterminedAutomaticState> {
+        val save = ArrayList(currentStates)
+        step(letter)
+        val new = ArrayList(currentStates)
+        currentStates = save
+        return new
+    }
+
     fun step(letter: Char) {
         if (currentStates.isEmpty()) {
             currentStates.add(startupState)
@@ -43,6 +51,17 @@ class NonDeterminedAutomatic(val states: MutableMap<String, NonDeterminedAutomat
         states[state.qualifier] = state
     }
 
+    fun goToStart(){
+        currentStates.clear()
+        currentStates.add(startupState)
+        var prevStates = ArrayList(currentStates)
+        reviewForLambdas()
+        while (prevStates != currentStates) {
+            prevStates = ArrayList(currentStates)
+            reviewForLambdas()
+        }
+    }
+
     fun reviewForLambdas() {
         val newCurrentStates = mutableListOf<NonDeterminedAutomaticState>()
         currentStates.forEach { state ->
@@ -54,6 +73,11 @@ class NonDeterminedAutomatic(val states: MutableMap<String, NonDeterminedAutomat
         }
         currentStates.addAll(newCurrentStates)
     }
+
+    override fun toString(): String {
+        return "NonDeterminedAutomatic(states=$states, alphabet=$alphabet)"
+    }
+
 
     companion object {
         const val lambda = '@'

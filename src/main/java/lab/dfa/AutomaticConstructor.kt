@@ -1,5 +1,7 @@
 package stacklab.nickdnepr.com.automaticaemu.automaticaCore
 
+import lab.nfa.NonDeterminedAutomatic
+
 class AutomaticConstructor private constructor(private val automatic: Automatic) {
 
     private val alphabet = mutableListOf<Char>()
@@ -9,29 +11,32 @@ class AutomaticConstructor private constructor(private val automatic: Automatic)
     }
 
     fun addTransaction(stateQualifier: String, transactionQualifier: String, letter: Char) {
+        if (letter == NonDeterminedAutomatic.lambda) {
+            return
+        }
+        println("Adding $stateQualifier to $transactionQualifier by $letter")
         val current =
-            automatic.states[stateQualifier] ?: throw NullPointerException("State with $stateQualifier not found")
+                automatic.states[stateQualifier] ?: throw NullPointerException("State with $stateQualifier not found")
         current.transactions[letter] = transactionQualifier
         if (!alphabet.contains(letter)) {
             alphabet.add(letter)
         }
     }
 
-    fun build(): Automatic {
+    fun build(missingOnItself: Boolean = false): Automatic {
         automatic.states.values.forEach {
-
             if (alphabet.isEmpty()) {
                 throw IllegalStateException("Automatic alphabet is empty")
             }
-//            it.transactions.keys.forEach {
-//                if (!alphabet.contains(it)){
-//                    throw IllegalStateException("Automatic is not complete")
-//                }
-//            }
+
             alphabet.forEach { letter ->
                 automatic.states.values.forEach { state ->
                     if (!state.transactions.keys.contains(letter)) {
-                        throw IllegalStateException("Automatic is not complete")
+                        if (missingOnItself) {
+                            addTransaction(state.qualifier, state.qualifier, letter)
+                        } else {
+                            throw IllegalStateException("Automatic is not complete")
+                        }
                     }
                 }
             }
@@ -45,9 +50,6 @@ class AutomaticConstructor private constructor(private val automatic: Automatic)
     }
 
     fun removeState(stateQualifier: String) {
-//        automatic.states[stateQualifier]?.transactions?.keys?.forEach{
-//            removeTransaction(stateQualifier, it)
-//        }
         automatic.states.remove(stateQualifier)
     }
 
@@ -56,8 +58,13 @@ class AutomaticConstructor private constructor(private val automatic: Automatic)
         list.addAll(automatic.states.keys)
     }
 
+    override fun toString(): String {
+        return "AutomaticConstructor(automatic=$automatic)"
+    }
+
+
     companion object {
         fun instance(startPoint: AutomaticState) =
-            AutomaticConstructor(Automatic(mutableMapOf(), startPoint, mutableListOf()))
+                AutomaticConstructor(Automatic(mutableMapOf(), startPoint, mutableListOf()))
     }
 }
