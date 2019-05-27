@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce090273-9603-47dc-bfe1-9af2174687f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lab/nfa/AutomaticDeterminer.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lab/regex/ParserToNfa.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lab/regex/Transaction.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lab/regex/TransactionPoint.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lab/dfa/AutomaticConstructor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab/dfa/AutomaticConstructor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lab/dfa/AutomaticState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab/dfa/AutomaticState.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lab/nfa/NonDeterminedAutomatic.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab/nfa/NonDeterminedAutomatic.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lab/nfa/NonDeterminedAutomaticConstructor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab/nfa/NonDeterminedAutomaticConstructor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lab/nfa/NonDeterminedAutomaticState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab/nfa/NonDeterminedAutomaticState.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/MainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lab/AutomaticCompressionState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/stacklab/nickdnepr/com/automaticaemu/automaticaCore/Automatic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stacklab/nickdnepr/com/automaticaemu/automaticaCore/Automatic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/stacklab/nickdnepr/com/automaticaemu/automaticaCore/AutomaticConstructor$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stacklab/nickdnepr/com/automaticaemu/automaticaCore/AutomaticConstructor$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/stacklab/nickdnepr/com/automaticaemu/automaticaCore/AutomaticConstructor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stacklab/nickdnepr/com/automaticaemu/automaticaCore/AutomaticConstructor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/stacklab/nickdnepr/com/automaticaemu/automaticaCore/AutomaticMinimizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stacklab/nickdnepr/com/automaticaemu/automaticaCore/AutomaticMinimizer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/stacklab/nickdnepr/com/automaticaemu/automaticaCore/AutomaticState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/stacklab/nickdnepr/com/automaticaemu/automaticaCore/AutomaticState.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,53 +19,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#191#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="150">
+              <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="18" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/lab/dfa/AutomaticMinimizer.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/java/lab/regex/ParserToNfa.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="424">
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/lab/regex/Transaction.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="59" column="36" lean-forward="true" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/lab/regex/TransactionPoint.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/lab/dfa/AutomaticState.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
               <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/lab/nfa/AutomaticDeterminer.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
-              <folding>
-                <element signature="e#17#239#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -130,8 +115,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
-        <option value="Kotlin Class" />
         <option value="Kotlin Object" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -161,9 +146,12 @@
         <option value="$PROJECT_DIR$/src/main/java/lab/dfa/AutomaticConstructor.kt" />
         <option value="$PROJECT_DIR$/src/main/java/lab/nfa/AutomaticDeterminer.kt" />
         <option value="$PROJECT_DIR$/src/main/java/lab/nfa/NonDeterminedAutomatic.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.kt" />
         <option value="$PROJECT_DIR$/src/main/java/lab/nfa/NonDeterminedAutomaticState.kt" />
         <option value="$PROJECT_DIR$/src/main/java/lab/dfa/AutomaticState.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/lab/regex/TransactionPoint.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/lab/regex/ParserToNfa.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/lab/regex/Transaction.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.kt" />
       </list>
     </option>
   </component>
@@ -186,7 +174,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -242,19 +230,28 @@
               <item name="Automatica" type="b2602c69:ProjectViewProjectNode" />
               <item name="Automatica" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lab" type="462c0819:PsiDirectoryNode" />
+              <item name="regex" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automatica" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automatica" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558435451908" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558946940328" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -355,6 +352,8 @@
       <workItem from="1557059308927" duration="42000" />
       <workItem from="1558336554669" duration="19082000" />
       <workItem from="1558552823853" duration="17000" />
+      <workItem from="1558555679021" duration="9077000" />
+      <workItem from="1558938413014" duration="8312000" />
     </task>
     <task id="LOCAL-00001" summary="- added removeState function for editor&#10;- added removeTransaction function for editor&#10;- automatic behavior changed to throwing exception on unknown qualifier instead of ignoring it">
       <created>1550824410659</created>
@@ -370,16 +369,24 @@
       <option name="project" value="LOCAL" />
       <updated>1558415417392</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="- added NFA determiner">
+      <created>1558555711325</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1558555711326</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43066000" />
+    <option name="totallyTimeSpent" value="60455000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2886873" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2950907" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -388,16 +395,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3296582" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49839914" weight="0.32855567" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39911798" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49786553" visible="true" weight="0.32855567" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49893278" weight="0.39911798" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32855567" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50160086" side_tool="true" weight="0.32855567" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32819384" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50213444" side_tool="true" weight="0.32855567" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3296582" />
       <window_info anchor="bottom" id="Statistic" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -417,7 +424,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- added removeState function for editor&#10;- added removeTransaction function for editor&#10;- automatic behavior changed to throwing exception on unknown qualifier instead of ignoring it" />
     <MESSAGE value="- added non-determined automatic emulator&#10;- restructured packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="- added non-determined automatic emulator&#10;- restructured packages" />
+    <MESSAGE value="- added NFA determiner" />
+    <option name="LAST_COMMIT_MESSAGE" value="- added NFA determiner" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/lab/regex/Transaction.kt</url>
+          <line>12</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Automatica.iml">
@@ -448,12 +470,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/java/lab/nfa/AutomaticDeterminer.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+        <state relative-caret-position="765">
+          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
           <folding>
-            <element signature="e#0#191#0" expanded="true" />
+            <element signature="e#17#239#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -462,16 +484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
           <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lab/nfa/AutomaticDeterminer.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
-          <folding>
-            <element signature="e#17#239#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -514,6 +526,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lab/regex/TransactionPoint.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lab/regex/ParserToNfa.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lab/regex/Transaction.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="59" column="36" lean-forward="true" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="18" selection-end-column="27" />
         </state>
       </provider>
     </entry>
